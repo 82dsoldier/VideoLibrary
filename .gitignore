@@ -8,3 +8,4 @@ node_modules/
 media/
 images/
 /VideoLibrary.Database/VideoLibrary.Database.jfm
+/VideoLibrary.Database/VideoLibrary.Database.dbmdl
