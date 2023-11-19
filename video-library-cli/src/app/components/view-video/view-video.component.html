@@ -1,0 +1,19 @@
+<div class="component">
+    <div>
+        <video controls [src]="video.videoPath"></video>
+    </div>
+    <div>
+        <mat-star-rating [rating]="rating" (ratingUpdated)="ratingUpdated($event)"></mat-star-rating>
+        <mat-form-field class="half-screen-form">
+            <label>Video Name</label>
+            <input matInput [formControl]="videoName">
+        </mat-form-field>
+        <mat-form-field class="half-screen-form">
+            <label>Keywords</label>
+            <input matInput [formControl]="keywords">
+        </mat-form-field>
+    </div>
+    <div>
+        <button mat-raised-button (click)="saveClicked()">Save</button>
+    </div>
+</div>

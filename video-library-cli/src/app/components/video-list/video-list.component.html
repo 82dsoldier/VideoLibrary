@@ -1,0 +1,18 @@
+<div class="container">
+    <mat-form-field style="width:100%;margin:0 60px 0 0">
+        <input type="text" matInput placeholder="Search" [formControl]="keywords" (keydown.enter)="onSearch()">
+        <button matSuffix mat-icon-button (click)="onSearch()"><mat-icon>search</mat-icon></button>
+    </mat-form-field>
+    <div class="responsive-grid">
+        <mat-card *ngFor="let video of videoList">
+            <img mat-card-image [src]="video.thumbnailPath" (click)="imageOnClick(video.videoId)" (mouseenter)="onMouseOver(video.videoId)" (mouseout)="onMouseOut(video.videoId)" class="link"/>
+            <mat-card-content>
+                <p class="center">{{ video.videoName }}</p>
+                <mat-star-rating [rating]="video.rating" (ratingUpdated)="ratingUpdated(video.videoId, $event)"></mat-star-rating>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div>
+        <mat-paginator class="paginator" (page)="onPage($event)" [length]="videoCount" [pageSize]="videosPerPage" [showFirstLastButtons]="true" [pageIndex]="currentPage"></mat-paginator>
+    </div>
+</div>
