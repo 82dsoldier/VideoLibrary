@@ -1,0 +1,10 @@
+dist/
+obj/
+bin/
+.angular/
+node_modules/
+.vscode/
+.vs/
+media/
+images/
+/VideoLibrary.Database/VideoLibrary.Database.jfm
