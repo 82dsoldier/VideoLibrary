@@ -19,6 +19,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { UploadVideoComponent } from './components/upload-video/upload-video.component';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { FlexModule, FlexLayoutModule } from '@angular/flex-layout';
 
 const appRoutes: Routes = [
   { path: '', component: VideoListComponent },
@@ -49,6 +50,8 @@ const appRoutes: Routes = [
     MatIconModule,
     MatSnackBarModule,
     MatProgressBarModule,
+    FlexModule,
+    FlexLayoutModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [],

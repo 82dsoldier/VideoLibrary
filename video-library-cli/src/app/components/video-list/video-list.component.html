@@ -7,7 +7,7 @@
         <mat-card *ngFor="let video of videoList">
             <img mat-card-image [src]="video.thumbnailPath" (click)="imageOnClick(video.videoId)" (mouseenter)="onMouseOver(video.videoId)" (mouseout)="onMouseOut(video.videoId)" class="link"/>
             <mat-card-content>
-                <p class="center">{{ video.videoName }}</p>
+                <a routerLink="view" [queryParams]="{id: video.videoId}"><p class="center">{{ video.videoName }}</p></a>
                 <mat-star-rating [rating]="video.rating" (ratingUpdated)="ratingUpdated(video.videoId, $event)"></mat-star-rating>
             </mat-card-content>
         </mat-card>

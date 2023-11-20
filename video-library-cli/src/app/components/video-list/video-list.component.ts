@@ -61,7 +61,7 @@ export class VideoListComponent implements OnInit {
     this.currentPage = event.pageIndex;
     sessionStorage.setItem('currentPage', this.currentPage.toString());
     let start = (event.pageIndex) * this.videosPerPage
-    if(this.keywords.value.length == 0 || this.keywords.value.length == undefined) {
+    if(this.keywords.value == null || this.keywords.value.length == 0 || this.keywords.value.length == undefined) {
       this.videoService.GetPaged(start, this.videosPerPage).subscribe((videoList: Video[]) => { 
         this.videoList = videoList; 
       });  

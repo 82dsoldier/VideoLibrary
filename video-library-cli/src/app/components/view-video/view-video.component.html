@@ -1,6 +1,15 @@
 <div class="component">
-    <div>
-        <video controls [src]="video.videoPath"></video>
+    <div fxHide fxShow.xl>
+        <video controls [src]="video.videoPath" width="1280" height="768"></video>
+    </div>
+    <div fxHide fxShow.md>
+        <video controls [src]="video.videoPath" width="1024" height="640"></video>
+    </div>
+    <div fxHide fxShow.sm>
+        <video controls [src]="video.videoPath" width="800" height="600"></video>
+    </div>
+    <div fxHide fxShow.xs>
+        <video controls [src]="video.videoPath" width="640" height="480"></video>
     </div>
     <div>
         <mat-star-rating [rating]="rating" (ratingUpdated)="ratingUpdated($event)"></mat-star-rating>
